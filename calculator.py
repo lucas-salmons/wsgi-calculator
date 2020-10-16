@@ -47,7 +47,36 @@ def home():
     Returns a WELCOME page in html
     includes instructions on how to use the app
     '''
-    return '<h1>Welcome</h1>'
+    return """
+    <h1>WSGI Calculator</h1>
+    <p>You are currently on the homepage!</p>
+    <p>To navigate to the calculator enter / followed by the operator name then n numbers seperated by /</p>
+    <p>Supported operators:</p>
+    <ul>
+        <li>add</li>
+        <li>multiply</li>
+        <li>subtract</li>
+        <li>divide</li>
+    </ul>
+    <p>Example Calculations:</p>
+    <table>
+        <tr>
+            <th>Operation</th><th>URL Value</th><th>Result</th>
+        </tr>
+        <tr>
+            <td>Multiply</td><td><a href='/multiply/3/5'>http://localhost:8080/multiply/3/5</a></td><td>15</td>
+        </tr>
+        <tr>
+            <td>Add</td><td><a href='/add/23/42'>http://localhost:8080/add/23/42</a></td><td>65</td>
+        </tr>
+        <tr>
+            <td>Subtract</td><td><a href='/subtract/23/42'>http://localhost:8080/subtract/23/42</a></td><td>-19</td>
+        </tr>
+        <tr>
+            <td>Divide</td><td><a href='/divide/22/11'>http://localhost:8080/divide/22/11</a></td><td>2</td>
+        </tr>
+    </table>
+    """
 
 
 def add(*args):
