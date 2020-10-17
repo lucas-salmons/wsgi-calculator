@@ -82,13 +82,9 @@ def home():
 def add(*args):
     """ Returns a STRING with the sum of the arguments """
 
-    # TODO: Fill sum with the correct value, based on the
-    # args provided.
-    sum = "0"
+    total = sum(map(int, args))
 
-    return sum
-
-# TODO: Add functions for handling more arithmetic operations.
+    return str(total)
 
 
 def multiply(*args):
