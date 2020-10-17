@@ -40,6 +40,7 @@ To submit your homework:
 
 
 """
+import functools
 
 
 def home():
@@ -89,7 +90,8 @@ def add(*args):
 
 def multiply(*args):
     """ Returns a STRING with the product of the arguments """
-    pass
+    product = functools.reduce(lambda a, b: a*b, map(int, args))
+    return str(product)
 
 
 def subtract(*args):
