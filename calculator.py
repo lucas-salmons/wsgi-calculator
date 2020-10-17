@@ -96,12 +96,14 @@ def multiply(*args):
 
 def subtract(*args):
     """ Returns a STRING with the difference of the arguments """
-    pass
+    difference = functools.reduce(lambda a, b: a-b, map(int, args))
+    return str(difference)
 
 
 def divide(*args):
     """ Returns a STRING with the quotient of the arguments """
-    pass
+    quotient = functools.reduce(lambda a, b: a/b, map(int, args))
+    return str(quotient)
 
 
 def resolve_path(path):
