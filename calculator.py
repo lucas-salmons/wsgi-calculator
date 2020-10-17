@@ -155,6 +155,9 @@ def application(environ, start_response):
     except NameError:
         status = "404 Not Found"
         body = "<h1>Not Found</h1>"
+    except ZeroDivisionError:
+        status = "400 Bad Request Error"
+        body = "<h1>Bad Request: ZeroDivisionError</h1>"
     except Exception:
         status = "500 Internal Service Error"
         body = "<h1>Internal Server Error</h1>"
